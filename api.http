@@ -16,9 +16,13 @@ POST http://localhost:3000/movies
 Content-Type: "application/json"
 
 {
-    "title": "The Godfather",
-    "year": 1972,
-    "director": "Francis Ford Coppola",
+  "title": "The Matrix",
+  "year": 1999,
+  "director": "Lana Wachowski",
+  "duration": 136,
+  "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+  "genre": ["Action", "Sci-Fi"],
+  "rate": 8.7
 
 }
 
