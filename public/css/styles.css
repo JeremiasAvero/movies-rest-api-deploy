@@ -1,24 +1,43 @@
 * {
-  font-family: sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #202020;
   box-sizing: border-box;
   color: white;
 }
 
+body {
+  background-color: black;
+}
+
 nav {
+  position: fixed;
   height: 100px;
   width: 100%;
   background-color: #3c3939;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+}
+nav .bi-film {
+  font-size: 3rem;
+  margin: 10px;
+}
+@media (max-width: 1000px) {
+  nav .bi-film {
+    font-size: 1rem;
+  }
 }
 nav h1 {
   font-size: 2.2rem;
   background: transparent;
   color: #f16581;
+}
+@media (max-width: 1000px) {
+  nav h1 {
+    font-size: 1rem;
+  }
 }
 nav ul {
   background: transparent;
@@ -37,50 +56,93 @@ nav a {
   color: white;
   text-decoration: none;
 }
+@media (max-width: 1000px) {
+  nav a {
+    font-size: 0.7rem;
+  }
+}
 nav a:hover {
   border-bottom: solid white 1px;
+}
+nav i {
+  font-size: 1.3rem;
+  background: transparent;
+}
+@media (max-width: 1000px) {
+  nav i {
+    font-size: 0.7rem;
+  }
 }
 
 .header {
   width: 100%;
-  background: white;
-  height: 700px;
-  margin: 10px;
-}
-.header .img-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.header .img-container .header-text {
+  background: #202020;
+  height: 90vh;
+  background-image: url(https://wallpapercave.com/wp/wp1945897.jpg);
+  background-color: black;
+  background-attachment: fixed;
+  box-shadow: inset 3000px 0px 0px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  font-size: 3rem;
 }
-.header .img-container img {
-  position: relative;
-  width: 40%;
-  height: 100%;
+@media (max-width: 700px) {
+  .header {
+    height: 80vh;
+  }
+}
+.header .header-text {
+  width: 100%;
+  background-color: #202020;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+}
+.header .header-text button {
+  width: 300px;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: crimson;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.header .header-text h1 {
+  margin-right: 20px;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .movies-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  background-color: black;
 }
 .movies-container .movie-card {
-  width: 400px;
+  width: 300px;
   height: 550px;
   margin: 6px;
   padding: 20px;
   text-align: center;
-  transition: width 1s, height 1s;
   cursor: pointer;
+}
+@media (max-width: 900px) {
+  .movies-container .movie-card {
+    width: 200px;
+    height: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .movies-container .movie-card {
+    width: 100px;
+    height: 250px;
+  }
 }
 .movies-container .movie-card img {
   width: 100%;
@@ -88,20 +150,227 @@ nav a:hover {
 }
 .movies-container .movie-card .movie-title {
   margin: 10px;
+  font-size: 1.5rem;
   background: transparent;
   font-weight: 500;
 }
+@media (max-width: 400px) {
+  .movies-container .movie-card .movie-title {
+    font-size: 0.7rem;
+  }
+}
 .movies-container .movie-card .movie-year {
+  background: transparent;
   display: inline;
+  height: 20%;
+  font-size: 1rem;
   margin: 5px;
   margin-right: 10px;
 }
+@media (max-width: 400px) {
+  .movies-container .movie-card .movie-year {
+    font-size: 0.7rem;
+  }
+}
 .movies-container .movie-card .movie-rate {
-  display: inline;
+  font-size: 1rem;
+  background: transparent;
+}
+@media (max-width: 400px) {
+  .movies-container .movie-card .movie-rate {
+    font-size: 0.7rem;
+  }
+}
+.movies-container .movie-card .movie-rate i {
+  margin: 5px;
+  background: transparent;
+  color: crimson;
+}
+@media (max-width: 400px) {
+  .movies-container .movie-card .movie-rate i {
+    font-size: 0.7rem;
+  }
 }
 .movies-container .movie-card:hover {
-  height: 570px;
   background: #3c3939;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 3000px 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.container .movie-container {
+  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+  border-radius: 20px;
+  margin-top: 60px;
+  width: 80%;
+  height: 80%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background: rgb(0, 0, 0);
+}
+@media (max-width: 1240px) {
+  .container .movie-container {
+    height: 70%;
+  }
+}
+@media (max-width: 870px) {
+  .container .movie-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 200px;
+  }
+}
+@media (max-width: 870px) {
+  .container .movie-container {
+    width: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+  }
+}
+.container .movie-container img {
+  height: 100%;
+  width: 700px;
+}
+@media (max-width: 1500px) {
+  .container .movie-container img {
+    margin: 40px;
+  }
+}
+@media (max-width: 1240px) {
+  .container .movie-container img {
+    width: 500px;
+    height: 600px;
+  }
+}
+@media (max-width: 1100px) {
+  .container .movie-container img {
+    width: 400px;
+    height: 500px;
+  }
+}
+@media (max-width: 700px) {
+  .container .movie-container img {
+    width: 250px;
+    height: 360px;
+  }
+}
+.container .movie-container .movie-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+@media (max-width: 1300px) {
+  .container .movie-container .movie-text {
+    width: 60%;
+  }
+}
+.container .movie-container .movie-text .movie-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.container .movie-container .movie-text .movie-title h1 {
+  font-size: 5rem;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 1300px) {
+  .container .movie-container .movie-text .movie-title h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 930px) {
+  .container .movie-container .movie-text .movie-title h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 700px) {
+  .container .movie-container .movie-text .movie-title h1 {
+    font-size: 1.5rem;
+  }
+}
+.container .movie-container .movie-text .movie-details {
+  font-size: 2rem;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+}
+@media (max-width: 1400px) {
+  .container .movie-container .movie-text .movie-details {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1300px) {
+  .container .movie-container .movie-text .movie-details {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 930px) {
+  .container .movie-container .movie-text .movie-details {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .container .movie-container .movie-text .movie-details {
+    font-size: 0.6rem;
+  }
+}
+.container .movie-container .movie-text .movie-details ul {
+  display: flex;
+  flex-direction: column;
+}
+.container .movie-container .movie-text .movie-details ul li {
+  margin-bottom: 10px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+}
+.container .movie-container .movie-text .movie-details ul li p {
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+}
+.container .movie-container .movie-text .buttons {
+  margin: 20px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .movie-container .movie-text .buttons button {
+  width: 200px;
+  margin: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: crimson;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .container .movie-container .movie-text .buttons button {
+    width: 100px;
+    padding: 10px;
+    font-size: 0.7rem;
+    margin: 100px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
