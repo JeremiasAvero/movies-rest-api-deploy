@@ -19,7 +19,7 @@ const swaggerSpec = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: "https://movies-rest-api-deploy-dev-qcrf.3.us-1.fl0.io",
       },
     ],
   },
