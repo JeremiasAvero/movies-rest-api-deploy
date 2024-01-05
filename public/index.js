@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fetch movies and display them
   const movieContainer = document.getElementById("movies-container");
   const header = document.getElementById("header");
-  fetch("/movies")
+  fetch("/api/movies")
     .then((response) => response.json())
     .then((movies) => {
       movies.forEach((movie) => {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="movie-year">${movie.year}</p> 
         <small class="movie-rate">${movie.rate} <i class="bi bi-star-fill"></i></small>`;
         movieCard.addEventListener("click", () => {
-          window.location.href = `/movie?id=${movie._id}`;
+          window.location.href = `/api/movies?id=${movie._id}`;
         });
 
         movieContainer.appendChild(movieCard);

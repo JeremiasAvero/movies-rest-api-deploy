@@ -11,7 +11,9 @@ body {
 }
 
 nav {
+  margin-bottom: 200px;
   position: fixed;
+  top: 1px;
   height: 100px;
   width: 100%;
   background-color: #3c3939;
@@ -72,50 +74,6 @@ nav i {
   nav i {
     font-size: 0.7rem;
   }
-}
-
-.header {
-  width: 100%;
-  background: #202020;
-  height: 90vh;
-  background-image: url(https://wallpapercave.com/wp/wp1945897.jpg);
-  background-color: black;
-  background-attachment: fixed;
-  box-shadow: inset 3000px 0px 0px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 700px) {
-  .header {
-    height: 80vh;
-  }
-}
-.header .header-text {
-  width: 100%;
-  background-color: #202020;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
-}
-.header .header-text button {
-  width: 300px;
-  font-size: 2rem;
-  font-weight: 600;
-  background-color: crimson;
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.header .header-text h1 {
-  margin-right: 20px;
-  font-size: 3rem;
-  font-weight: 600;
 }
 
 .movies-container {
@@ -214,7 +172,7 @@ nav i {
   flex-direction: row;
   align-items: center;
   padding: 10px;
-  background: rgb(0, 0, 0);
+  background: rgb(67, 66, 66);
 }
 @media (max-width: 1240px) {
   .container .movie-container {

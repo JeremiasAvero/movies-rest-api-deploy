@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(movieId);
 
   if (movieId) {
-    fetch(`/movies/${movieId}`)
+    fetch(`/api/movies/${movieId}`)
       .then((response) => response.json())
       .then((data) => {
         const movie = data.movie;

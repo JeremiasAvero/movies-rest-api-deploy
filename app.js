@@ -4,6 +4,7 @@ import movieController from "./routes/index.js";
 import bodyParser from "body-parser";
 import { moviesRouter } from "./routes/movies.js";
 import { corsMiddleware } from "./middlewares/cors.js";
+import swagger from "./swagger.js";
 
 const app = express();
 
@@ -17,7 +18,9 @@ app.use(express.static("public", { extensions: ["html", "css", "scss"] }));
 // Routes
 app.use("/", movieController);
 // Todos los recursos que sean MOVIES se identifica con /movies
-app.use("/movies", moviesRouter);
+app.use("/api/movies", moviesRouter);
+app.use(swagger);
+
 const PORT = process.env.PORT ?? 3000;
 app.listen(PORT, () => {
   console.log("Server listening on port", `http://localhost:${PORT}`);

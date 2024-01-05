@@ -6,6 +6,7 @@ const ACCEPTED_ORIGINS = [
   "https://movies.com",
   "https://midu.dev",
   "http://127.0.0.1:5500",
+  "mongodbsrv://localhost:3000",
 ];
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) =>
